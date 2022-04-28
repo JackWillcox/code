@@ -1,4 +1,6 @@
-# Instructions for 36 game for values (1,15) for operations *,/,+,-,!
+# Instructions for 36 game for values (1,15) for operations *,/,+,-,^,log with base and value
+
+-	Given any 4 digits from a range of (1,15), which may have repititions, using just the operations +,-,*,/,^, log with bases and values
 
 ## Make a class Game
 
