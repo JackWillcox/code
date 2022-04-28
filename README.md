@@ -1,5 +1,7 @@
 # Instructions for 36 game for values (1,15) for operations *,/,+,-,!
 
+-	Given any 4 digits from a range of (1,15), which may have repititions, using just the operations +,-,*,/,^
+
 ## Make a class Game
 
 ## Make a class Round
