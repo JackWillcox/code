@@ -1,6 +1,6 @@
 import itertools
 
-# todo
+
 # Use operations +,-,*,/, ^
 # Use brute force
 # Only use powers if nums less than 7
@@ -10,16 +10,13 @@ def tsg(lst):
             pass
 
 
-
-
-
-
 def operations(nums, operation):
     a, b = nums[0], nums[1]
 
     ops = {'+': a + b, '-': a - b, '*': a * b, '/': a / b, '^': a ** b}
 
     return ops[operation]
+
 
 def permute(new_lst):
     if len(new_lst) < 2:
@@ -29,8 +26,10 @@ def permute(new_lst):
         the_rest = new_lst[1:]
         permute_the_rest = permute(the_rest)
         result = []
+        print(permute_the_rest)
         for index, value in enumerate(permute_the_rest):
-            pass
+            result.append(permute_the_rest.insert(index, first_char))
 
 
-lst = [4, 4, 7, 8]
+lst = [4, 3, 7, 8]
+print(permute(lst))
