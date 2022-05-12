@@ -20,15 +20,18 @@ def operations(nums, operation):
 
 def permute(new_lst):
     if len(new_lst) < 2:
-        return [new_lst]
+        return new_lst
     else:
         first_char = new_lst[0]
         the_rest = new_lst[1:]
         permute_the_rest = permute(the_rest)
         result = []
         print(permute_the_rest)
-        for index, value in enumerate(permute_the_rest):
-            result.append(permute_the_rest.insert(index, first_char))
+        for index in range(len(permute_the_rest)):
+            temp = permute_the_rest
+            temp.insert(index, first_char)
+            result+=temp
+        return result
 
 
 lst = [4, 3, 7, 8]

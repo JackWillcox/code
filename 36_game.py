@@ -1,6 +1,7 @@
 import tkinter as tk
 import random
 
+
 class ThirtySixGame:
 
     def __init__(self):
@@ -10,9 +11,6 @@ class ThirtySixGame:
         pass
 
 
-
-
-
 class Player:
 
     def __init__(self, name):
@@ -20,10 +18,9 @@ class Player:
 
     def apply_operation(self):
         pass
+print()
+nums = [random.randint(1, 15) for i in range(4)]
 
 
-#checking
-nums = [random.randint(1,15) for i in range(4)]
 def thirty_six_solver(nums):
     pass
-
