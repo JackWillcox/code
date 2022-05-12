@@ -22,7 +22,7 @@ class Player:
         pass
 
 
-
+#checking
 nums = [random.randint(1,15) for i in range(4)]
 def thirty_six_solver(nums):
     pass
