@@ -22,16 +22,14 @@ def permute(new_lst):
     if len(new_lst) < 2:
         return new_lst
     else:
-        first_char = new_lst[0]
-        the_rest = new_lst[1:]
-        permute_the_rest = permute(the_rest)
-        result = []
-        print(permute_the_rest)
-        for index in range(len(permute_the_rest)):
-            temp = permute_the_rest
-            temp.insert(index, first_char)
-            result+=temp
-        return result
+        lst=[]
+        for index in range(len(new_lst)):
+            temp = new_lst[index]
+            remaining_lst = new_lst[:index] + new_lst[index+1:]
+            for j in permute(remaining_lst):
+                lst.append([temp] + j)
+        return lst
+
 
 
 lst = [4, 3, 7, 8]
