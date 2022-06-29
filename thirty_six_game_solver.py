@@ -1,13 +1,11 @@
-import itertools
+from itertools import chain
 
 
 # Use operations +,-,*,/, ^
 # Use brute force
 # Only use powers if nums less than 7
 def tsg(lst):
-    for i in itertools.permutations(lst, 4):
-        for j in i:
-            pass
+    pass
 
 
 def operations(nums, operation):
@@ -18,19 +16,34 @@ def operations(nums, operation):
     return ops[operation]
 
 
-def permute(new_lst):
-    if len(new_lst) < 2:
-        return new_lst
-    else:
-        lst=[]
-        for index in range(len(new_lst)):
-            temp = new_lst[index]
-            remaining_lst = new_lst[:index] + new_lst[index+1:]
-            for j in permute(remaining_lst):
-                lst.append([temp] + j)
-        return lst
+def all_words():
+    base = 16
+    digits = 4
 
+    lst = [2 for i in range(digits)]
+    overall = []
+    counting = True
+
+    while counting:
+        c_lst = sorted(lst.copy())
+
+        if c_lst not in overall:
+            overall.append(c_lst)
+        pointer = digits - 1
+        seeking = True
+        while seeking and counting:
+            lst[pointer] += 1
+            if lst[pointer] == base:
+                lst[pointer] = 2
+                pointer -= 1
+                if pointer < 0:
+                    counting = False
+            else:
+                seeking = False
+
+    print(overall)
 
 
 lst = [4, 3, 7, 8]
-print(permute(lst))
+
+all_words()
