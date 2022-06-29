@@ -5,6 +5,7 @@ from itertools import chain
 # Use brute force
 # Only use powers if nums less than 7
 def tsg(lst):
+    #hello
     pass
 
 
