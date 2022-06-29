@@ -20,7 +20,7 @@ def all_words():
     base = 16
     digits = 4
 
-    lst = [2 for i in range(digits)]
+    lst = [1 for i in range(digits)]
     overall = []
     counting = True
 
@@ -34,7 +34,7 @@ def all_words():
         while seeking and counting:
             lst[pointer] += 1
             if lst[pointer] == base:
-                lst[pointer] = 2
+                lst[pointer] = 1
                 pointer -= 1
                 if pointer < 0:
                     counting = False
